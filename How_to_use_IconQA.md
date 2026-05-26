@@ -1,8 +1,8 @@
-## Introduction
+## Introduction(对数据集的介绍)
 
-![PyTorch](https://img.shields.io/badge/PyTorch-v1.9.0-green) ![Huggingface](https://img.shields.io/badge/Hugging%20Face-v0.0.12-green) ![Torchvision](https://img.shields.io/badge/Torchvision-v0.10.0-green) 
+![PyTorch](https://img.shields.io/badge/PyTorch-v1.9.0-green) ![Huggingface](https://img.shields.io/badge/Hugging%20Face-v0.0.12-green) ![Torchvision](https://img.shields.io/badge/Torchvision-v0.10.0-green)
 
-![VQA](https://img.shields.io/badge/Task-VQA-orange) ![MathAI](https://img.shields.io/badge/Task-MathAI-orange) ![Diagram](https://img.shields.io/badge/Task-Diagram-orange) ![IconQA](https://img.shields.io/badge/Dataset-IconQA%20-blue) ![Icon645](https://img.shields.io/badge/Dataset-Icon645-blue) ![Transformer](https://img.shields.io/badge/Model-Transformer-red) ![Pre-trained](https://img.shields.io/badge/Model-Pre--trained-red) 
+![VQA](https://img.shields.io/badge/Task-VQA-orange) ![MathAI](https://img.shields.io/badge/Task-MathAI-orange) ![Diagram](https://img.shields.io/badge/Task-Diagram-orange) ![IconQA](https://img.shields.io/badge/Dataset-IconQA%20-blue) ![Icon645](https://img.shields.io/badge/Dataset-Icon645-blue) ![Transformer](https://img.shields.io/badge/Model-Transformer-red) ![Pre-trained](https://img.shields.io/badge/Model-Pre--trained-red)
 
 Data and code for NeurIPS 2021 Paper "[IconQA: A New Benchmark for Abstract Diagram Understanding and Visual Language Reasoning](https://openreview.net/pdf?id=uXa9oBDZ9V1)".
 
@@ -16,6 +16,7 @@ There are three different sub-tasks in **IconQA**:
 - 31,578 multi-text-choice questions
 - 18,189 filling-in-the-blank questions
 
+
 | Sub-Tasks              | Train  | Validation | Test   | Total  |
 | ---------------------- | ------ | ---------- | ------ | ------ |
 | *Multi-image-choice*   | 34,603 | 11,535     | 11,535 | 57,672 |
@@ -28,21 +29,17 @@ We further develop a strong model, **Patch-TRM**, which parses the diagram in a 
 
 For more details, you can find our website [here](https://iconqa.github.io/) and our paper [here](https://openreview.net/pdf?id=uXa9oBDZ9V1).
 
-
-
 ## Download the IconQA Dataset
 
-You can download **IconQA** [here](https://iconqa2021.s3.us-west-1.amazonaws.com/iconqa_data.zip) or from [Google Drive](https://drive.google.com/file/d/1Xqdt1zMcMZU5N_u1SAIjk-UAclriynGx), then unzip the dataset into `root_dir/data`. 
+You can download **IconQA** [here](https://iconqa2021.s3.us-west-1.amazonaws.com/iconqa_data.zip) or from [Google Drive](https://drive.google.com/file/d/1Xqdt1zMcMZU5N_u1SAIjk-UAclriynGx), then unzip the dataset into `root_dir/data`.
 
-Next, download pre-trained models [here](https://iconqa2021.s3.us-west-1.amazonaws.com/saved_models.zip) or from [Google Drive](https://drive.google.com/file/d/1cGHqvOK-aMqby21qeCLs4vv6wnWK3n4E), then unzip them into `root_dir`. 
+Next, download pre-trained models [here](https://iconqa2021.s3.us-west-1.amazonaws.com/saved_models.zip) or from [Google Drive](https://drive.google.com/file/d/1cGHqvOK-aMqby21qeCLs4vv6wnWK3n4E), then unzip them into `root_dir`.
 
 Or run the command by:
 
 ```shell
 . tools/download_data_and_models.sh
 ```
-
-
 
 ## Run the Patch-TRM model for IconQA
 
@@ -241,8 +238,6 @@ python sub_acc.py \
 --choose_img_result exp0_patch_transformer_ques_bert.json
 ```
 
-
-
 ## Icon645 Dataset
 
 In addition to **IconQA**, we also present **Icon645**, a large-scale dataset of icons that cover a wide range of objects:
@@ -250,7 +245,7 @@ In addition to **IconQA**, we also present **Icon645**, a large-scale dataset of
 - **645,687** colored icons
 - **377** different icon classes (class mapping is stored in [icon645_classes.json](https://github.com/lupantech/IconQA/blob/main/data/icon645_classes.json))
 
-These collected icon classes are frequently mentioned in the IconQA questions. In this work, we use the icon data to pre-train backbone networks on the icon classification task in order to extract semantic representations from abstract diagrams in IconQA. On top of pre-training encoders, the large-scale icon data could also contribute to open research on abstract aesthetics and symbolic visual understanding. 
+These collected icon classes are frequently mentioned in the IconQA questions. In this work, we use the icon data to pre-train backbone networks on the icon classification task in order to extract semantic representations from abstract diagrams in IconQA. On top of pre-training encoders, the large-scale icon data could also contribute to open research on abstract aesthetics and symbolic visual understanding.
 
 ![icon_examples](data/icon645_examples.png)
 
@@ -278,11 +273,9 @@ icon645
     └───airplane
     |   |   image_id3.png
     |   |   ...
-    |      
+    |    
     |   ...
 ```
-
-
 
 ## Citation
 
@@ -296,8 +289,6 @@ If the paper or the dataset inspires you, please cite us:
   year = {2021}
 }
 ```
-
-
 
 ## License
 
